@@ -1,0 +1,4 @@
+title: "183333 — Residency Day Lab"
+url: "https://183333.com"
+baseurl: ""
+exclude: [README.md, BUILD-PROMPTS.md, RESEARCH.md]
