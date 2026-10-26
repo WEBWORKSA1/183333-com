@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Residency Calculators: US SPT, Schengen 90/180, UK SRT, India | 183333</title>
+<meta name="description" content="Free calculators for the US Substantial Presence Test, Schengen 90/180, UK Statutory Residence Test, India residential status and days-left planning.">
+<link rel="canonical" href="https://183333.com/calculators.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0b1020">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="183333 Residency Day Lab">
+<meta property="og:title" content="Residency Calculators: US SPT, Schengen 90/180, UK SRT, India | 183333">
+<meta property="og:description" content="Free calculators for the US Substantial Presence Test, Schengen 90/180, UK Statutory Residence Test, India residential status and days-left planning.">
+<meta property="og:url" content="https://183333.com/calculators.html">
+<meta name="twitter:card" content="summary">
+<meta name="google-adsense-account" content="ca-pub-6620975821265271">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "183333 Residency Day Lab", "url": "https://183333.com/"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="ribbon" role="note">contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership — <a href="https://web.works/contact" target="_blank" rel="noopener">web.works/contact</a></div>
+<header class="hdr"><div class="wrap">
+<a class="brand" href="index.html" aria-label="183333 home"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="2.5" stroke-dasharray="4 3"/><circle cx="24" cy="24" r="16" fill="var(--amber)"/><text x="24" y="28.5" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="700" font-size="12" fill="#1a1200">183</text></svg><span>183333<small>Residency Day Lab</small></span></a>
+<button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
+<nav class="nav" id="menu" aria-label="Main"><a href="tracker.html">Day Tracker</a><a href="calculators.html">Calculators</a><a href="countries.html">Country Rules</a><a href="visas.html">Nomad Visas</a><a href="guides/index.html">Guides</a><a href="videos.html">Videos</a><a href="support.html">Support</a><a class="cta" href="match.html">Get Matched</a></nav>
+<button class="icon-btn" id="themeBtn" aria-label="Toggle light or dark theme">◐</button>
+</div></header>
+<main id="main">
+
+<section class="hero" style="padding-bottom:10px"><div class="wrap">
+<div class="crumbs"><a href="index.html">Home</a> / Calculators</div>
+<span class="eyebrow">5 calculators · browser-only</span><h1>Residency Calculators</h1>
+<p class="lead" style="color:var(--muted);max-width:760px">Fast, transparent estimates for the residency tests people get wrong most often. Every result explains which rule produced it.</p>
+</div></section>
+<section style="padding-top:20px"><div class="wrap">
+<div class="tool-tabs" role="tablist">
+<button class="on" data-tool="t-spt">US Presence Test</button><button data-tool="t-sch">Schengen 90/180</button><button data-tool="t-uk">UK SRT</button><button data-tool="t-ind">India Status</button><button data-tool="t-left">Days-Left Planner</button></div>
+
+<div class="tool on" id="t-spt"><div class="grid g2"><div class="card">
+<h3>US Substantial Presence Test</h3>
+<div class="field"><label for="spt-y0">Days in the US this year</label><input id="spt-y0" type="number" min="0" max="366" value="120"></div>
+<div class="field"><label for="spt-y1">Days last year</label><input id="spt-y1" type="number" min="0" max="366" value="120"></div>
+<div class="field"><label for="spt-y2">Days the year before</label><input id="spt-y2" type="number" min="0" max="366" value="120"></div>
+<div class="field"><label for="spt-ex">Excluded days this year (exempt status, medical, transit &lt;24h, commuting)</label><input id="spt-ex" type="number" min="0" max="366" value="0"></div>
+</div><div class="card"><h3>Result</h3><div class="result"><div class="verdict" id="spt-verdict"></div><p class="mono" style="font-size:2rem;margin:10px 0 0"><span id="spt-total"></span> <span class="small muted">weighted days</span></p><p class="small muted mono" id="spt-parts"></p><p id="spt-left"></p></div>
+<p class="small muted">Formula: current-year days + ⅓ prior year + ⅙ second prior year ≥ 183, with at least 31 days this year. <a href="guides/us-substantial-presence-test.html">Read the guide</a>.</p></div></div></div>
+
+<div class="tool" id="t-sch"><div class="grid g2"><div class="card">
+<h3>Schengen 90/180 calculator</h3>
+<p class="small muted">Add every past or planned stay in any Schengen country (entry and exit days both count).</p>
+<div id="sch-rows"></div>
+<button class="btn btn-ghost btn-sm" type="button" id="sch-add">+ Add stay</button>
+<div class="field" style="margin-top:14px"><label for="sch-date">Check date / planned entry</label><input id="sch-date" type="date"></div>
+</div><div class="card"><h3>Result</h3><div class="result"><div class="verdict" id="sch-verdict"></div>
+<div class="grid g3" style="margin-top:12px"><div><div class="big-num" id="sch-used">0</div><span class="small muted">used before date</span></div><div><div class="big-num" id="sch-left">90</div><span class="small muted">left in window</span></div><div><div class="big-num" id="sch-max">0</div><span class="small muted">max stay from date</span></div></div>
+<p class="small" style="margin-top:12px">Latest exit for a continuous stay: <b id="sch-exit">—</b></p></div>
+<p class="small muted">Covers the 29 Schengen states. Bilateral agreements and long-stay visas are not modelled. <a href="guides/schengen-90-180-rule.html">Read the guide</a>.</p></div></div></div>
+
+<div class="tool" id="t-uk"><div class="grid g2"><div class="card">
+<h3>UK Statutory Residence Test — quick check</h3>
+<div class="field"><label for="uk-days">Days in the UK this tax year (present at midnight)</label><input id="uk-days" type="number" min="0" max="366" value="100"></div>
+<div class="field"><label for="uk-prev">UK resident in any of the previous 3 tax years?</label><select id="uk-prev"><option value="yes">Yes — I am a leaver</option><option value="no">No — I am an arriver</option></select></div>
+<div class="field"><label for="uk-ties">Number of UK ties (family, accommodation, work, 90-day, country*)</label><input id="uk-ties" type="number" min="0" max="5" value="2"></div>
+<div class="field"><label class="check"><input type="checkbox" id="uk-ftwa"> I work full-time overseas (and have fewer than 31 UK workdays)</label></div>
+<p class="small muted">*The country tie applies to leavers only.</p>
+</div><div class="card"><h3>Result</h3><div class="result"><div class="verdict" id="uk-verdict"></div><p id="uk-why" style="margin-top:10px"></p></div>
+<p class="small muted"><a href="guides/uk-statutory-residence-test.html">Read the full SRT guide</a>.</p></div></div></div>
+
+<div class="tool" id="t-ind"><div class="grid g2"><div class="card">
+<h3>India residential status — estimator</h3>
+<div class="field"><label for="in-days">Days in India this financial year (Apr–Mar)</label><input id="in-days" type="number" min="0" max="366" value="130"></div>
+<div class="field"><label for="in-prev4">Days in India in the previous 4 years (total)</label><input id="in-prev4" type="number" min="0" max="1461" value="500"></div>
+<div class="field"><label for="in-prev7">Days in India in the previous 7 years (total)</label><input id="in-prev7" type="number" min="0" max="2557" value="900"></div>
+<div class="field"><label class="check"><input type="checkbox" id="in-cit" checked> I am an Indian citizen / person of Indian origin living abroad</label></div>
+<div class="field"><label class="check"><input type="checkbox" id="in-inc"> My Indian-source income exceeds ₹15 lakh</label></div>
+<div class="field"><label class="check"><input type="checkbox" id="in-elsewhere" checked> I am liable to tax in another country</label></div>
+<div class="field"><label class="check"><input type="checkbox" id="in-leave"> I left India this year for employment abroad</label></div>
+<div class="field"><label class="check"><input type="checkbox" id="in-nr9"> I was non-resident in at least 9 of the previous 10 years</label></div>
+</div><div class="card"><h3>Result</h3><div class="result"><div class="verdict" id="in-verdict"></div><p id="in-why" style="margin-top:10px"></p></div>
+<p class="small muted">Based on the residency tests carried into India's Income-tax Act, 2025. <a href="guides/india-residency-nri.html">Read the NRI guide</a>.</p></div></div></div>
+
+<div class="tool" id="t-left"><div class="grid g2"><div class="card">
+<h3>Days-left planner</h3>
+<div class="field"><label for="dl-thr">Threshold (days)</label><select id="dl-thr"><option value="183">183 (most countries)</option><option value="182">182 (India, Malaysia)</option><option value="180">180 (Thailand)</option><option value="90">90 (Schengen-style / Switzerland non-working)</option><option value="91">91 (South Africa yearly)</option></select></div>
+<div class="field"><label for="dl-used">Days already used in the window</label><input id="dl-used" type="number" min="0" max="366" value="120"></div>
+<div class="two"><div class="field"><label for="dl-date">Planned arrival</label><input id="dl-date" type="date"></div><div class="field"><label for="dl-end">Planned departure</label><input id="dl-end" type="date"></div></div>
+</div><div class="card"><h3>Result</h3><div class="result"><div class="verdict" id="dl-verdict"></div><p style="margin-top:10px">Days you can still spend while staying <em>under</em> the threshold: <b class="mono" id="dl-left"></b></p><p>Continuous stay would reach the threshold on: <b id="dl-cross"></b></p></div></div></div></div>
+
+<p class="small muted" style="margin-top:24px">All calculators are simplified educational models. They do not replace the official rules or professional advice. See our <a href="disclaimer.html">disclaimer</a>.</p>
+</div></section>
+<section><div class="wrap"><div class="lead-box reveal" style="display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:center">
+<div><span class="eyebrow">Free matching · 2-minute form</span><h2>Two countries might be claiming you?</h2><p class="muted">Tell us your situation once. We route it to a vetted cross-border tax or relocation professional who fits your countries, language and budget. No cost to you, no obligation.</p></div>
+<div><a class="btn btn-primary" href="match.html" style="width:100%">Get matched with an expert →</a><p class="small muted" style="margin-top:10px">Typical reply: 1–2 business days.</p></div>
+</div></div></section></main>
+<footer class="ftr"><div class="wrap">
+<div class="cols">
+<div><a class="brand" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="none" stroke="var(--amber)" stroke-width="2.5" stroke-dasharray="4 3"/><circle cx="24" cy="24" r="16" fill="var(--amber)"/><text x="24" y="28.5" text-anchor="middle" font-family="JetBrains Mono,monospace" font-weight="700" font-size="12" fill="#1a1200">183</text></svg><span>183333<small>Residency Day Lab</small></span></a>
+<p class="muted small" style="margin-top:12px">Free tools and plain-English guides for counting days, understanding tax residency and planning life across borders. Educational information — not tax or legal advice.</p>
+<p class="small"><a href="#" data-mail="Inquiry from 183333.com">Email us</a> · <a href="https://web.works/contact" target="_blank" rel="noopener">Domain &amp; partnership inquiries</a></p></div>
+<div><h4>Tools</h4><ul><li><a href="tracker.html">Day Tracker</a></li><li><a href="calculators.html#t-spt">US Presence Test</a></li><li><a href="calculators.html#t-sch">Schengen 90/180</a></li><li><a href="calculators.html#t-uk">UK SRT Check</a></li><li><a href="calculators.html#t-ind">India Status</a></li></ul></div>
+<div><h4>Learn</h4><ul><li><a href="guides/index.html">All Guides</a></li><li><a href="countries.html">Country Rules</a></li><li><a href="visas.html">Nomad Visas</a></li><li><a href="glossary.html">Glossary</a></li><li><a href="videos.html">Videos</a></li></ul></div>
+<div><h4>Community</h4><ul><li><a href="match.html">Get Matched</a></li><li><a href="advisors.html">For Advisors</a></li><li><a href="contests.html">Contests &amp; Prizes</a></li><li><a href="careers.html">Careers</a></li><li><a href="support.html">Support Us</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="advertise.html">Advertise / Sponsor</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="cookies.html">Cookies</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="trademark.html">Trademark &amp; Copyright</a></li></ul></div>
+</div>
+<div class="legal">© <span class="year">2026</span> 183333.com. Original content and tools. "183333" is used solely as this website's domain name; no trademark rights in the number are claimed, and this site is not affiliated with any government, tax authority, or the OECD. Rule summaries are educational, were last reviewed 2026-10, and must be confirmed with the official authority. See <a href="trademark.html">Trademark &amp; Copyright Disclosure</a> and <a href="disclaimer.html">Disclaimer</a>.</div>
+</div></footer>
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie notice"><b>Cookies &amp; ads</b><p class="small muted" style="margin:6px 0 0">We use cookies for preferences and Google AdSense advertising, which may use cookies to personalise ads. See our <a href="cookies.html">Cookie Policy</a> and <a href="privacy.html">Privacy Policy</a>.</p><div class="row"><button class="btn btn-primary btn-sm" data-cookie="all">Accept</button><button class="btn btn-ghost btn-sm" data-cookie="essential">Essential only</button></div></div>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body></html>
